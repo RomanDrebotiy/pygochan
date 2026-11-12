@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pygochan"
+version = "0.1.0"
+description = "Go-style channels for Python threads, with a shift-operator DSL and select via match."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+keywords = ["channel", "golang", "go", "concurrency", "threading", "select", "csp"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries",
+    "Typing :: Typed",
+]
+dependencies = [
+    # TypeVar defaults (PEP 696) so that Channel[T] means Channel[T, Both].
+    "typing_extensions>=4.12",
+]
+
+[project.optional-dependencies]
+dev = ["mypy>=1.11", "pyright>=1.1.380"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pygochan"]
+
+[tool.mypy]
+strict = true
+files = ["src"]
+
+[tool.pyright]
+include = ["src", "examples"]
+# Sending with the DSL (`value >> c`) is an expression statement.
+reportUnusedExpression = false
