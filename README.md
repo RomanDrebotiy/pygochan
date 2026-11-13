@@ -407,11 +407,12 @@ has a full docstring, so `help(pygochan.select)` works.
 
 ## Declaration of generative AI technologies usage
 
-Originally proposed by the author without using AI:
-- idea of the library which mimics the Go channel semantics with the DSL based on shift operators
-- match/select semantics similar to Go's
-- general approach with the use of typical concurrency patterns with queues, threads, locks
-- general idea of using similar architecture as in the original Go runtime
+Originally done by the author without using AI:
+- proposed idea of the library which mimics the Go channel semantics with the DSL based on shift operators
+- proposed match/select semantics similar to Go's
+- proposed general approach with the use of typical concurrency patterns with waiter queues, threads, locks
+- proposed general idea of using similar architecture as in the original Go runtime
+- program code preparation
 
 Generative AI (Anthropic Claude) was used as an assistant in writing the Python code, documentation and exploring the Go runtime.
 
