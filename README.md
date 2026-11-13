@@ -38,7 +38,7 @@ close(c)              # close(c)
   - [Errors](#errors)
 - [Notes](#notes)
 - [API reference](#api-reference)
-- [Development](#development)
+- [Declaration of generative AI technologies usage](#declaration-of-generative-ai-technologies-usage)
 - [License](#license)
 
 ---
