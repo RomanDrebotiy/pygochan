@@ -36,9 +36,10 @@ close(c)              # close(c)
   - [`select` with `match`](#select-with-match)
   - [`len`, `cap` and other helpers](#len-cap-and-other-helpers)
   - [Errors](#errors)
-- [Gotchas](#gotchas)
+- [Notes](#notes)
 - [API reference](#api-reference)
 - [Development](#development)
+- [License](#license)
 
 ---
 
@@ -339,7 +340,7 @@ All exceptions derive from `pygochan.ChannelError` (a `RuntimeError`).
 
 ---
 
-## Gotchas
+## Notes
 
 * **Operator precedence.** `<<` and `>>` bind more tightly than comparisons
   and `&`/`|`, and less tightly than `+`/`-`. `x + 1 >> c` sends `x + 1`, but
@@ -416,7 +417,7 @@ Generative AI (Anthropic Claude) was used as an assistant in writing the Python 
 
 After using this tool, the author reviewed, edited, and tested the resulting library code.
 
-## Notes
+## License
 
 *Copyright (c) 2026 Roman Drebotiy*
 
